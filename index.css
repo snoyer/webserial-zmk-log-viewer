@@ -1,0 +1,100 @@
+form {
+  display: inline;
+  margin-left: 50px;
+}
+
+.log {
+  font-family: monospace;
+  overflow-y: scroll;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: 0;
+}
+
+.log hr{
+  border: none;
+  border-top: 1px dashed gray;
+}
+
+.log > .unknown {
+  color: gray;
+}
+
+.log > .dup,
+.log > .first-dup {
+  opacity: 50%;
+  margin-bottom: -5px;
+}
+
+.log > .inf {
+  background-color: #0000ff22;
+}
+.log > .wrn {
+  background-color: #ffff0022;
+}
+.log > .err {
+  background-color: #ff000033;
+}
+.log > div > span {
+  display: table-cell;
+}
+
+.log > div > .t {
+  color: gray;
+  font-size: 75%;
+  padding-right: 0.25em;
+}
+.log > div > .s {
+  font-size: 75%;
+  padding-right: 0.25em;
+}
+.log > div > .l {
+  font-size: 75%;
+  padding-right: 0.25em;
+}
+
+.log .annot {
+  font-size: 75%;
+  vertical-align: top;
+}
+
+
+mark.m1{background-color: hsl(000, 50%, 80%);}
+mark.m2{background-color: hsl(180, 50%, 80%);}
+mark.m3{background-color: hsl(090, 50%, 80%);}
+mark.m4{background-color: hsl(270, 50%, 80%);}
+mark.m5{background-color: hsl(045, 50%, 80%);}
+mark.m6{background-color: hsl(225, 50%, 80%);}
+mark.m6{background-color: hsl(135, 50%, 80%);}
+mark.m8{background-color: hsl(315, 50%, 80%);}
+
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #222222;
+    color: #dddddd;
+  }
+
+  a[href] {
+    color: lightblue;
+  }
+  a[href]:hover {
+    color: plum;
+  }
+
+  mark{
+    color: inherit;
+  }
+  mark.m1{background-color: hsl(000, 50%, 40%);}
+  mark.m2{background-color: hsl(180, 50%, 40%);}
+  mark.m3{background-color: hsl(090, 50%, 40%);}
+  mark.m4{background-color: hsl(270, 50%, 40%);}
+  mark.m5{background-color: hsl(045, 50%, 40%);}
+  mark.m6{background-color: hsl(225, 50%, 40%);}
+  mark.m6{background-color: hsl(135, 50%, 40%);}
+  mark.m8{background-color: hsl(315, 50%, 40%);}
+
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebSerial ZMK Log Viewer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+
+    <div id="tools" class="tools">
+      <button class="connect">connect</button>
+      <button class="clear">clear</button>
+      
+      <form class="highlight">
+        <label for="kw">highlight:</label>
+        <input id="kw" class="keywords" value="" placeholder="keywords to highlight"/>
+        <input type="button" class="reset" value="x"/>
+      </form>
+    </div>
+
+    <div id="log" class="log"></div>
+    <ul id="intro-supported" class="intro">
+      <li class="inf">click the "connect" button to connect to a ZMK device.</li>
+      <li>shift+click the "connect" button to show more devices.</li>
+      <li class="wrn">note that the browser needs to have access to the serial port.</li>
+      <li>ie. you need to be able to read the port as yourself without `sudo`.</li>
+      <li class="inf">click <a href="#sample">here</a> to load a sample ZMK log.</li>
+    </ul>
+    <ul id="intro-unsupported" class="intro">
+      <li class="err">this browser does not support the WebSerial API.</li>
+      <li>see <a target="_blank" href="https://caniuse.com/web-serial">https://caniuse.com/web-serial</a> for compatibily details.</li>
+      <li class="inf">click <a href="#sample">here</a> to load a sample ZMK log.</li>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.13.0/system.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.13.0/extras/named-register.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.es6.min.js"></script>
+    <script src="dist/bundle.js"></script>
+    <script type="module">
+      System.import("index");
+    </script>
+  </body>
+</html>

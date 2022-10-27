@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "System",
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "lib": ["ES2018", "DOM"],
+        "outDir": "dist",
+        "outFile": "./dist/bundle.js",
+        "sourceMap": true,
+    },
+    "exclude": [".git", "node_modules", "dist"]
+}
